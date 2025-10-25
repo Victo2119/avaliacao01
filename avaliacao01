@@ -1,0 +1,37 @@
+// ========================================
+// 📘 Cálculo de Médias - Victor Gabriel Lima Lopes
+// ========================================
+
+// Notas dos bimestres
+let bimestre1 = 6;
+let bimestre2 = 7;
+let bimestre3 = 8;
+let bimestre4 = 9;
+
+// Cálculo das médias semestrais
+let semestre1 = (bimestre1 + bimestre2) / 2; // 1º semestre
+let semestre2 = (bimestre3 + bimestre4) / 2; // 2º semestre
+
+// Cálculo da média final
+let mediaFinal = (semestre1 + semestre2) / 2;
+
+// Exibindo os resultados
+console.log("=== Médias de Victor Gabriel Lima Lopes ===");
+console.log(`📘 1º Bimestre: ${bimestre1}`);
+console.log(`📗 2º Bimestre: ${bimestre2}`);
+console.log(`📙 3º Bimestre: ${bimestre3}`);
+console.log(`📒 4º Bimestre: ${bimestre4}`);
+console.log("-----------------------------------------");
+console.log(`🧮 1º Semestre: ${semestre1.toFixed(1)}`);
+console.log(`🧠 2º Semestre: ${semestre2.toFixed(1)}`);
+console.log("-----------------------------------------");
+console.log(`🏆 Média Final: ${mediaFinal.toFixed(1)}`);
+
+// Verificação do desempenho
+if (mediaFinal >= 7) {
+    console.log("✅ Parabéns, Victor! Você está aprovado!");
+} else if (mediaFinal >= 5) {
+    console.log("⚠️ Você está em recuperação, mas pode melhorar!");
+} else {
+    console.log("❌ Reprovado. Não desanime, continue se esforçando!");
+}
