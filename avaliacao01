@@ -1,3 +1,57 @@
+termometro 
+
+public class Thermometer {
+    private double temperatureCelsius;
+
+    public Thermometer(double temperatureCelsius) {
+        this.temperatureCelsius = temperatureCelsius;
+    }
+
+    public double getTemperatureCelsius() {
+        return temperatureCelsius;
+    }
+
+    public double getTemperatureFahrenheit() {
+        return temperatureCelsius * 9 / 5 + 32;
+    }
+
+    public void setTemperatureCelsius(double temperatureCelsius) {
+        this.temperatureCelsius = temperatureCelsius;
+    }
+
+    // Gera uma barra visual com base na temperatura
+    public String getVisualBar() {
+        int max = 50; // limite máximo para exibição no gráfico
+        int level = (int) Math.min(Math.max(temperatureCelsius, 0), max);
+
+        StringBuilder bar = new StringBuilder("[");
+        for (int i = 0; i < max; i++) {
+            if (i < level) bar.append("█");
+            else bar.append(" ");
+        }
+        bar.append("]");
+
+        return bar.toString();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ========================================
 // 📘 Cálculo de Médias - Victor Gabriel Lima Lopes
 // ========================================
